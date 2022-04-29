@@ -1,0 +1,28 @@
+POST http://localhost:8080/v1/api/producer/exchange=direct
+Content-Type: application/json
+
+{
+  "name": "Nombre D",
+  "lastName": "Apellido D",
+  "email": "ejemploDirect@gmail.com"
+}
+
+###
+POST http://localhost:8080/v1/api/producer/exchange=fanout
+Content-Type: application/json
+
+{
+  "name": "Nombre F",
+  "lastName": "Apellido F",
+  "email": "ejemploFanout@gmail.com"
+}
+
+###
+POST http://localhost:8080/v1/api/producer/exchange=topic&routingKey=queue.3
+Content-Type: application/json
+
+{
+  "name": "Nombre T",
+  "lastName": "Apellido T",
+  "email": "ejemploTopic@gmail.com"
+}
